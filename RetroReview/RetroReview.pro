@@ -13,8 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        retroreview.cpp
+        retroreview.cpp \
+    settingsdialog.cpp
 
-HEADERS  += retroreview.h
+HEADERS  += retroreview.h \
+    settingsdialog.h
 
-FORMS    += retroreview.ui
+FORMS    += retroreview.ui \
+    settingsdialog.ui
