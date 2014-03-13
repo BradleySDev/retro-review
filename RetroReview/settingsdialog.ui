@@ -13,11 +13,11 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QTabWidget" name="tabWidget">
+  <widget class="QTabWidget" name="mainTab">
    <property name="geometry">
     <rect>
-     <x>9</x>
-     <y>9</y>
+     <x>10</x>
+     <y>10</y>
      <width>471</width>
      <height>461</height>
     </rect>
@@ -57,7 +57,7 @@
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
-     <widget class="QGroupBox" name="groupBox_2">
+     <widget class="QGroupBox" name="configurationStatusBox">
       <property name="minimumSize">
        <size>
         <width>150</width>
@@ -66,7 +66,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>150</width>
+        <width>250</width>
         <height>100</height>
        </size>
       </property>
@@ -75,14 +75,14 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="label">
+        <widget class="QLabel" name="VersionControlStatusLabel">
          <property name="text">
           <string>Version Control Status?</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="emailStatusLabel">
          <property name="text">
           <string>Email Status?</string>
          </property>
@@ -92,7 +92,7 @@
      </widget>
     </item>
     <item>
-     <spacer name="verticalSpacer">
+     <spacer name="sidebarTopSpacer">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -105,7 +105,7 @@
      </spacer>
     </item>
     <item>
-     <widget class="QGroupBox" name="groupBox">
+     <widget class="QGroupBox" name="programDetailsBox">
       <property name="minimumSize">
        <size>
         <width>150</width>
@@ -114,7 +114,7 @@
       </property>
       <property name="maximumSize">
        <size>
-        <width>150</width>
+        <width>250</width>
         <height>100</height>
        </size>
       </property>
@@ -123,31 +123,46 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <item>
-        <widget class="QLabel" name="label_3">
-         <property name="text">
-          <string>Version: </string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="versionLabel">
+           <property name="text">
+            <string>Version: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="versionValue">
+           <property name="text">
+            <string>0.0.0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
        <item>
-        <widget class="QLabel" name="label_4">
-         <property name="text">
-          <string>Date: </string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="label_5">
-         <property name="text">
-          <string>Developer: </string>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="developerLabel">
+           <property name="text">
+            <string>Developer: </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="developerValue">
+           <property name="text">
+            <string>Bradley Smith</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
     </item>
     <item>
-     <spacer name="verticalSpacer_2">
+     <spacer name="sidebarBottomSpace">
       <property name="orientation">
        <enum>Qt::Vertical</enum>
       </property>
@@ -162,7 +177,7 @@
     <item>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QPushButton" name="pushButton_2">
+       <widget class="QPushButton" name="cancelButton">
         <property name="minimumSize">
          <size>
           <width>80</width>
@@ -181,7 +196,7 @@
        </widget>
       </item>
       <item>
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QPushButton" name="acceptButton">
         <property name="minimumSize">
          <size>
           <width>80</width>
