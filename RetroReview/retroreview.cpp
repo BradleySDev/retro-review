@@ -11,6 +11,9 @@ RetroReview::RetroReview(QWidget *parent) :
 
     createConnections();
 
+    configHandler = ConfigurationHandler::getInstance();
+    log = LogHandler::getInstance();
+
 }
 
 RetroReview::~RetroReview()

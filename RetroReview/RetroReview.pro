@@ -15,11 +15,13 @@ TEMPLATE = app
 SOURCES += main.cpp\
         retroreview.cpp \
     settingsdialog.cpp \
-    configurationhandler.cpp
+    configurationhandler.cpp \
+    loghandler.cpp
 
 HEADERS  += retroreview.h \
     settingsdialog.h \
-    configurationhandler.h
+    configurationhandler.h \
+    loghandler.h
 
 FORMS    += retroreview.ui \
     settingsdialog.ui

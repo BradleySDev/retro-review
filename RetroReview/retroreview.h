@@ -4,6 +4,7 @@
 #include <QMainWindow>
 #include "settingsdialog.h"
 #include "configurationhandler.h"
+#include "loghandler.h"
 
 namespace Ui {
 class RetroReview;
@@ -26,7 +27,8 @@ private:
 private:
     Ui::RetroReview *ui;
     SettingsDialog settingsDlg;
-    ConfigurationHandler configHandler;
+    ConfigurationHandler* configHandler;
+    LogHandler* log;
 };
 
 #endif // RETROREVIEW_H
