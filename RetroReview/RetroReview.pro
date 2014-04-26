@@ -16,12 +16,17 @@ SOURCES += main.cpp\
         retroreview.cpp \
     settingsdialog.cpp \
     configurationhandler.cpp \
-    loghandler.cpp
+    loghandler.cpp \
+    createsvnaccountdialog.cpp \
+    datamanager.cpp
 
 HEADERS  += retroreview.h \
     settingsdialog.h \
     configurationhandler.h \
-    loghandler.h
+    loghandler.h \
+    createsvnaccountdialog.h \
+    datamanager.h
 
 FORMS    += retroreview.ui \
-    settingsdialog.ui
+    settingsdialog.ui \
+    createsvnaccountdialog.ui
