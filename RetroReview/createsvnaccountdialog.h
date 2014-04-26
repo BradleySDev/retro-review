@@ -14,7 +14,7 @@ class CreateSvnAccountDialog : public QWidget
 public:
     explicit CreateSvnAccountDialog(QWidget *parent = 0);
     ~CreateSvnAccountDialog();
-    void initDialog(const QString& location, const QString& username, const QString& password);
+    void initDialog(const QString& nickname, const QString& location, const QString& username, const QString& password);
 
 public slots:
     void acceptSvnData();
@@ -28,6 +28,7 @@ private:
     QString* svnLocation;
     QString* svnUsername;
     QString* svnPassword;
+    QString* svnNickname;
 };
 
 #endif // CREATESVNACCOUNTDIALOG_H

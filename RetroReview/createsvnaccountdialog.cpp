@@ -16,6 +16,7 @@ CreateSvnAccountDialog::~CreateSvnAccountDialog()
 
 void CreateSvnAccountDialog::acceptSvnData()
 {
+    svnNickname->append(ui->svnNicknameEdit->text());
     svnLocation->append(ui->svnLocationEdit->text());
     svnUsername->append(ui->svnUsernameEdit->text());
     svnPassword->append(ui->svnPasswordEdit->text());
@@ -34,10 +35,11 @@ void CreateSvnAccountDialog::createConnections()
     connect(ui->cancelButton, SIGNAL(clicked()), this, SLOT(cancelSvnData()));
 }
 
-void CreateSvnAccountDialog::initDialog(const QString& location, const QString& username, const QString& password)
+void CreateSvnAccountDialog::initDialog(const QString &nickname, const QString& location, const QString& username, const QString& password)
 {
     this->show();
 
+    svnNickname = const_cast<QString*>(&nickname);
     svnLocation = const_cast<QString*>(&location);
     svnUsername = const_cast<QString*>(&username);
     svnPassword = const_cast<QString*>(&password);

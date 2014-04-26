@@ -17,8 +17,8 @@ public:
     ~SettingsDialog();
 
 public slots:
-
     void createSvnAccount();
+    void updateSvnTable();
 
 private:
     void createConnections();

@@ -15,9 +15,10 @@ DataManager* DataManager::getInstance()
     return instance;
 }
 
-void DataManager::addSvnAccount(QString location, QString username, QString password)
+void DataManager::addSvnAccount(QString nickname, QString location, QString username, QString password)
 {
     SvnAccountData temp;
+    temp.nickname = QString(nickname);
     temp.location = QString(location);
     temp.username = QString(username);
     temp.password = QString(password);
@@ -27,4 +28,9 @@ void DataManager::addSvnAccount(QString location, QString username, QString pass
     svnAccounts.append(temp);
 
     emit svnAccountsUpdated();
+}
+
+QList<SvnAccountData> DataManager::getSvnAccounts()
+{
+    return svnAccounts;
 }

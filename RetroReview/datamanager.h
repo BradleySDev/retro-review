@@ -5,6 +5,7 @@
 #include <QList>
 
 typedef struct {
+    QString nickname;
     QString location;
     QString username;
     QString password;
@@ -19,8 +20,8 @@ class DataManager : public QObject
 
 public:
     static DataManager* getInstance();
-    void addSvnAccount(QString location, QString username, QString password);
-
+    void addSvnAccount(QString nickname, QString location, QString username, QString password);
+    QList<SvnAccountData> getSvnAccounts();
 
 private:
     // Private Constructor
